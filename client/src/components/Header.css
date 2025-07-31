@@ -1,0 +1,237 @@
+
+:root {
+    --primary-color: #4CAF50; 
+    --dark-neutral: #333; 
+    --light-neutral: #f8f8f8; 
+    --text-light: #fff; 
+    --text-dark: #333; 
+    --header-height: 70px; 
+    --hero-height: 450px; 
+}
+
+
+.main-header {
+    width: 100%;
+    position: relative; 
+    overflow: hidden; 
+   
+}
+
+.header-top-bar {
+    height: var(--header-height);
+    background-color: #ECEAE3; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 5%;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.logo-name-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.header-logo {
+    height: 63px; 
+    width: auto;
+}
+
+.app-name {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2.5em; 
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+    letter-spacing: 1.5px; 
+}
+
+.header-nav .nav-list {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.header-nav .nav-item {
+    margin-left: 20px; 
+}
+
+.header-nav .nav-link {
+    text-decoration: none; 
+    color: #333; 
+    
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.2em; 
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+    background-color: transparent; 
+}
+
+.header-nav .nav-link:hover {
+    color: #CC5500; 
+    border-color: #CC5500; 
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: var(--hero-height); /*carrusel*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.hero-image-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* La imagen cubre todo el espacio */
+    background-position: center; 
+    transition: background-image 1.5s ease-in-out; /* Transición suave al cambiar la imagen */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    max-width: 900px; 
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-slogan {
+    font-family: 'Merriweather', serif; 
+    font-size: 2.8em; 
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-light);
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); 
+
+}
+.call-to-action-button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action-button:hover {
+    background-color: darken(var(--primary-color), 10%); 
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .header-top-bar {
+        height: 60px;
+        padding: 0 3%;
+    }
+    .header-logo {
+        height: 40px;
+    }
+    .app-name {
+        font-size: 2em;
+    }
+    .hero-height {
+        height: 350px;
+    }
+    .hero-slogan {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-name {
+        font-size: 1.6em;
+        font-family: 'Montserrat', sans-serif; 
+    font-size: 2.5em; 
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1.5px;
+    }
+
+.header-nav .nav-list {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.header-nav .nav-item {
+    margin-left: 20px; 
+}
+
+.header-nav .nav-link {
+    text-decoration: none; 
+    color: #333; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 2px solid transparent; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.header-nav .nav-link:hover {
+    color: #CC5500;
+    border-color:  #CC5500;
+   background-color: rgba(0, 0, 0, 0.05);
+}
+    .hero-slogan {
+        font-size: 1.5em;
+    }
+    .call-to-action-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+.favorite-nav-item {
+    position: relative;
+    margin-left: 20px; 
+}
+.favorite-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.favorite-count {
+    background-color: #CC5500; 
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.75em;
+    font-weight: bold;
+    position: absolute;
+    top: -5px; 
+    right: -10px; 
+    min-width: 20px; 
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

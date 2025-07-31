@@ -1,0 +1,32 @@
+.favorite-star-container {
+    position: absolute;
+    top: 15px;   
+    right: 310px;  
+    background-color: rgba(255, 255, 255, 0.965); 
+    border-radius: 50%; 
+    width: 40px;      
+    height: 40px;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 20; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.favorite-star-container:hover {
+    transform: scale(1.1); 
+}
+
+
+.favorite-star-icon {
+    font-size: 1.5em; 
+    color: gray; 
+    transition: color 0.2s ease-in-out; 
+}
+
+
+.favorite-star-icon.active {
+    color: #f17312; 
+}
